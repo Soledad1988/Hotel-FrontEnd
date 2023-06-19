@@ -1,0 +1,59 @@
+
+<div class="container">
+
+  <div class="container" class="d-flex justify-content-start">
+
+    <section class="bg-white rounded-5  text-secondary shadow" style="width: 40rem">
+      <div class="d-flex justify-content-center">
+        <img src="/assets/imagenes/reservas-img-2.png" alt="registro" style="height: 25rem"/>
+      </div>
+    </section>
+
+    <section class="container" class="d-flex justify-content-end">
+
+      <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 30rem">
+
+        <div lass="p-2 bd-highlight" class="d-flex justify-content-center">
+
+          <form class="formulario">
+              <h2>Sistema de Reservas</h2>
+              
+              <label>Check-in</label>
+              <input type="date" id="timeStart" name="Checkin" class="form-control" oninput="calculardiasDiscount()" placeholder="dd/mm/yyyy" [ngModel]="nuevaReserva.ingreso | date:'yyyy-MM-dd' : 'UTC'"  (ngModelChange)="nuevaReserva.ingreso = $event">
+
+              <label>Check-out</label>
+              <input type="date" id="timeEnd" name="Checkout" class="form-control" oninput="calculardiasDiscount()" placeholder="dd/mm/yyyy" [ngModel]="nuevaReserva.salida | date:'yyyy-MM-dd' : 'UTC'"  (ngModelChange)="nuevaReserva.salida = $event">
+
+              <label>Valor</label>
+              <input type="text" value="valor" class="form-control" id="valor" name="valor" [(ngModel)]="nuevaReserva.valor" (ngModelChange)="nuevaReserva.valor = $event">
+              
+
+              <div class="input-info">
+                  <label class="info-label">Forma de Pago</label>
+                  <select name="miselect"  [(ngModel)]="nuevaReserva.pago">
+                  <option *ngFor="let item of opciones">{{item}}</option>
+                  </select >{{nuevaReserva.pago}}
+              </div>
+
+              <div class="row" class="form-footer">
+                <div class="col" class="d-inline p-2">
+                  <button type="button" class="button btn-info" [routerLink]="['/huesped']" routerLinkActive="router-link-active" (click)="agregarReserva()">
+                    <img src="/assets/imagenes/icon-reservas.png" height="auto"> Confirmar Reserva</button>
+                </div>
+                <div class="col" class="d-inline p-2">
+                  <button type="button" class="button" class="btn btn-secondary" [routerLink]="['/menu']" routerLinkActive="router-link-active">
+                    <img src="/assets/imagenes/cancelar.png" height="20px"> Cancelar</button>
+                </div>
+              </div>
+              
+          </form>
+        
+        </div>
+
+      </div>
+    
+    </section>
+
+  </div>
+</div>
+

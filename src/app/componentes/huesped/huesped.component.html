@@ -1,0 +1,62 @@
+
+<div class="container">
+
+  <div class="container" class="d-flex justify-content-start">
+
+    <section class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 40rem">
+      <div class="d-flex justify-content-center">
+      <img src="/assets/imagenes/registro.png" alt="login-icon" style="height: 20rem"/>
+      </div>
+    </section>
+
+    <section class="container" class="d-flex justify-content-end">
+
+      <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 30rem">
+
+          <div class="d-grid" class="p-2 bd-highlight" class="d-flex justify-content-center"> 
+
+            <form class="d-grid gap-2">
+              <h2>Datos del Huesped</h2>
+              
+              <input type="text" name="nombre" class="form-control" placeholder="Ingrese Nombre" [(ngModel)]="nuevoHuesped.nombre">
+
+              <input type="text" name="apellido" class="form-control" placeholder="Ingrese Apellido" [(ngModel)]="nuevoHuesped.apellido">
+
+              <label>Fecha Nacimiento</label>
+              <input type="date" name="nacimiento" class="form-control" placeholder="dd/mm/yyyy" [ngModel]="nuevoHuesped.nacimiento | date:'yyyy-MM-dd'"  (ngModelChange)="nuevoHuesped.nacimiento = $event">
+
+              <label>Nacionalidad</label>
+              {{nuevoHuesped.nacionalidad}}
+              <select class="col-auto" name="miselect" [(ngModel)]="nuevoHuesped.nacionalidad">
+                <option [value]="nacionalidades" *ngFor="let nacionalidades of nac">{{nacionalidades}}</option>
+              </select>
+                
+              <input type="text" name="nacimiento" class="form-control" placeholder="Telefono" [(ngModel)]="nuevoHuesped.telefono" required>
+      
+              <input type="text" name="codigo" class="form-control" placeholder="N° Reserva" [ngModel]="nuevoHuesped.codigo" required>
+
+              <div class="form-footer">
+
+                <div class="col" class="d-inline p-2">
+                <button type="submit" class="button btn-info" [routerLink]="['/menu']" routerLinkActive="router-link-active" (click)="agregarHuesped()">
+                  <img src="/assets/imagenes/icon-reservas.png" height="auto"> Confirmar Registro</button>
+                </div>
+
+                <div class="col" class="d-inline p-2">
+                  <button type="reset" class="button" class="btn btn-secondary" [routerLink]="['/menu']" routerLinkActive="router-link-active">
+                  <img src="/assets/imagenes/cancelar.png" height="20px"> Cancelar</button>
+                </div>
+                
+              </div>
+        
+            </form>
+        
+          </div>
+
+      </div>
+      
+    </section>
+
+  </div>
+
+</div>

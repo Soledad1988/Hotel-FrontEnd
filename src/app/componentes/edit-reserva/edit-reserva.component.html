@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="container" class="d-flex justify-content-center">
+    
+      <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 30rem">
+
+          <div lass="p-2 bd-highlight" class="d-flex justify-content-center">
+    
+            <form action="/examples/actions/confirmation.php" method="post">
+              <h2>Actualizacion de Reservas</h2>
+
+              <label>Check-in</label>
+              <input type="date" id="timeStart" name="Checkin" class="form-control" oninput="calculardiasDiscount()" placeholder="dd/mm/yyyy" [ngModel]="reservaActual.ingreso | date:'yyyy-MM-dd' : 'UTC'"  (ngModelChange)="reservaActual.ingreso = $event">
+
+              <label>Check-out</label>
+              <input type="date" id="timeEnd" name="Checkout" class="form-control" oninput="calculardiasDiscount()" placeholder="dd/mm/yyyy" [ngModel]="reservaActual.salida | date:'yyyy-MM-dd' : 'UTC'"  (ngModelChange)="reservaActual.salida = $event">
+
+              <label>Valor</label>
+              <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="reservaActual.valor" (ngModelChange)="reservaActual.valor = $event">
+        
+        
+              <div class="input-info">
+                  <label class="info-label">Forma de Pago</label>
+                  <select name="miselect"  [(ngModel)]="reservaActual.pago">
+                  <option *ngFor="let item of opciones">{{item}}</option>
+                  </select >{{reservaActual.pago}}
+              </div>
+
+              <div class="row" class="form-footer">
+                <div class="col" class="d-inline p-2">
+                  <button type="submit" class="button btn-info" [routerLink]="['/huesped']" routerLinkActive="router-link-active" (click)="guardar()">
+                    <img src="/assets/imagenes/icon-reservas.png" height="auto"> Modificar Reserva</button>
+                </div>
+              </div>
+                
+            </form>
+    
+          </div>
+    
+      </div>
+        
+    </div>
+    
+</div>
+    
+    

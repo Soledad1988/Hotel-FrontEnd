@@ -1,0 +1,56 @@
+
+<div class="container">
+  
+    <section class="container-fluid" >
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <input type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-info btn-sm" type="submit">
+          <img src="/assets/imagenes/busqueda.png" height="20px"> Buscar</button>
+      </div>
+      
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button class="btn btn-info" [routerLink]="['/busqueda']" routerLinkActive="router-link-active">
+          <img src="/assets/imagenes/reservas.png" height="25px"> Reservas</button>
+
+        <button class="btn btn-info" [routerLink]="['/Bhuesped']" routerLinkActive="router-link-active">
+          <img src="/assets/imagenes/persona.png" height="25px"> Huespedes</button>
+
+        <button class="btn btn-secondary" [routerLink]="['/menu']" routerLinkActive="router-link-active">
+          <img src="/assets/imagenes/aH-40px.png" height="25px"> Menu Principal</button>
+          
+      </div>
+
+    </section>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Check In</th>
+            <th scope="col">Check Out</th>
+            <th scope="col">Monto</th>
+            <th scope="col">Forma de Pago</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let reserva of lista">
+            <td>{{reserva.id}}</td>
+            <td>{{reserva.ingreso}}</td>
+            <td>{{reserva.salida}}</td>
+            <td>{{reserva.valor}}</td>
+            <td>{{reserva.pago}}</td>
+            <td>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-info btn-sm"  routerLink="/editar/{{reserva.id}}" routerLinkActive="router-link-active">
+                <img src="/assets/imagenes/editar-texto.png" height="15px" ></button>
+                <button class="btn btn-secondary btn-sm" (click)="eliminar(reserva.id)">
+                <img src="/assets/imagenes/papelera-de-reciclaje.png" height="15px"></button>
+              </div>
+            </td>
+          </tr>
+          
+        </tbody>
+    </table>
+
+</div>

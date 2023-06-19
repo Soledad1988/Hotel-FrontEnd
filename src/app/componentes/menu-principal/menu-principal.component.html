@@ -1,0 +1,63 @@
+
+<div class="container">
+
+  <div class="container" class="d-flex justify-content-start">
+
+    <section class="bg-white p-5 text-secondary shadow" style="width: 50rem">
+        <h2>Sistema de Reservas Hotel Alura</h2>
+
+        <span>Fecha: {{todayDate | date:"dd-MM-yyyy"}}</span> - 
+        <span>Hora: {{todayDate | date:"shortTime"}}</span>
+        <br>
+
+        <h2>Bienvenidos</h2>
+        <p>Sistema de reserva de hotel, controle y administre de forma optima y facil el 
+        flujo de reservas y de huespedes del hotel
+        </p>
+
+        <p>Esta herramineta le permitira llevar un control completo y detallado de sus 
+        reservas y huespedes, tendra acceso a herramientas especiales para tareas especificas
+        como son:
+        </p>
+
+        <ul>
+          <li>Registro de Reservas y Huespedes</li>
+          <li>Edision de Reservas y Huespedes existentes</li>
+          <li>Eliminar todo tipo de registro</li>
+        </ul>
+
+    </section>
+  
+    <section class="container" class="d-flex justify-content-end">
+
+      <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
+          
+        <div >
+          <img class="rounded mx-auto d-block" src="/assets/imagenes/Ha-100px.png" alt="login-icon" style="height: 10rem"/>
+        </div>
+
+        <div class="row">
+                <div class="d-inline p-2">
+                  <button type="button" class="btn btn-info btn-sm" [routerLink]="['/reserva']" routerLinkActive="router-link-active">
+                    <img src="/assets/imagenes/icon-reservas.png" height="20px"> Registro de Reservas</button>
+                </div>
+
+                <div class="d-inline p-2">
+                  <button type="button"  class="btn btn-secondary btn-sm" [routerLink]="['/busqueda']" routerLinkActive="router-link-active">
+                      <img src="/assets/imagenes/icon-buscar.png" > Busqueda</button>
+                </div>
+        </div>
+    
+      </div>
+      
+    </section>
+
+  </div>
+
+  <div class="d-grid col-2 mx-auto">
+    <button class="btn btn-outline-info btn-sm" [routerLink]="['/login']" routerLinkActive="router-link-active">
+        <img src="/assets/imagenes/cerrar-sesion 32-px.png" height="25px"> Cerrar Sesión</button>
+  </div>  
+
+</div>
+

@@ -1,0 +1,45 @@
+
+<div class="container">
+
+  <div class="container" class="d-flex justify-content-start">
+
+      <section class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 50rem">
+        <div class="d-flex justify-content-center">
+        <img src="/assets/imagenes/hotel.png" alt="login-icon" style="height: 25rem"/>
+        </div>
+      </section>
+
+      <section class="container" class="d-flex justify-content-end">
+
+        <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 25rem">
+
+            <div lass="p-2 bd-highlight" class="d-flex justify-content-center">
+            <img src="/assets/otras/login-icon.svg" alt="login-icon" style="height: 12rem"/>
+            </div>
+
+            <div class="text-center fs-1 fw-bold">Login</div>
+            <div class="input-group mt-4">
+              <div class="input-group-text bg-info">
+              <img src="/assets/otras/username-icon.svg" alt="username-icon" style="height: 1rem"/>
+              </div>
+              <input class="form-control bg-light" type="text" placeholder="Username"/>
+            </div>
+
+            <div class="input-group mt-1">
+              <div class="input-group-text bg-info">
+              <img src="/assets/otras/password-icon.svg" alt="password-icon" style="height: 1rem"/>
+              </div>
+              <input class="form-control bg-light" type="password" placeholder="Password"/>
+            </div>
+          
+            <div class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm"  (click)="login()" *ngIf="!isLogged" [routerLink]="['/menu']" routerLinkActive="router-link-active">
+              Login
+            </div>
+          
+        </div>
+
+      </section>
+
+  </div>
+
+</div>

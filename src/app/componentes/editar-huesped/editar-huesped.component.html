@@ -1,0 +1,36 @@
+
+<div class="container" class="d-flex justify-content-center">
+
+  <div class="bg-white p-5 rounded-5 text-secondary shadow" style="width: 30rem">
+
+    <form class= "d-grid gap-2">
+
+      <h2 class="bg-white p-1 text-secondary">Editar Datos del Huesped</h2>
+              
+      <input type="text" name="nombre" class="form-control" placeholder="Ingrese Nombre" [(ngModel)]="huespedActual.nombre">
+
+      <input type="text" name="apellido" class="form-control" placeholder="Ingrese Apellido" [(ngModel)]="huespedActual.apellido">
+
+      <label>Fecha Nacimiento</label>
+      <input type="date" name="nacimiento" class="form-control" placeholder="dd/mm/yyyy" [ngModel]="huespedActual.nacimiento | date:'yyyy-MM-dd'"  (ngModelChange)="huespedActual.nacimiento = $event">
+
+      <label>Nacionalidad</label>
+      {{huespedActual.nacionalidad}}
+      <select class="col-auto" name="miselect" [(ngModel)]="huespedActual.nacionalidad">
+      <option [value]="nacionalidades" *ngFor="let nacionalidades of nac">{{nacionalidades}}</option>
+      </select>
+
+      <input type="text" name="reserva" class="form-control" placeholder="N° Reserva" [(ngModel)]="huespedActual.codigo">
+
+
+      <div class="form-footer">
+      <button type="button" class="button btn-info" [routerLink]="['/Bhuesped']" routerLinkActive="router-link-active" (click)="guardar()">
+      <img src="/assets/imagenes/icon-reservas.png" height="auto">Confirmar Cambios</button>
+      </div>
+      
+    </form>
+    
+  </div>
+  
+     
+</div>

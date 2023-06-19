@@ -1,27 +1,44 @@
-# Hotel
+# Hotel- Alura
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+## :bulb: Desarrollo de Software para llevar el control de las reservaciones hechas por sus clientes. 
 
-## Development server
+`Sistema de reserva que contenga:`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Sistema de autenticación de usuario para que solo usuarios pertenecientes al hotel consigan acceder al sistema;
+- Permitir crear, editar y eliminar una reserva para los clientes;
+- Buscar en la base de datos todas las informaciones tanto de los clientes como de las reservas;
+- Registrar, editar y eliminar datos de los huéspedes;
+- Calcular el valor de la reserva en base a la cantidades de días de la reserva y a una tasa diaria que puede ser asignada por ti y 
+en la moneda local de tu país, por ejemplo si tenemos una reserva de 2 dias y el valor de nuestra diaria son $800 debemos multiplicar 
+esos 2 dias por el valor de la diaria, lo que serian $1.600, todo esto deberá ser hecho automaticamente y mostrado al usuario antes de 
+guardar la reserva;
+- Base de datos para almacenar todos los datos pedidos anteriormente. 
 
-## Code scaffolding
+<h4>
+:construction: Proyecto en construcción :construction:
+</h4>
+Actualmente trabajando en la autenticación JWT :no_entry_sign:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h4>
+:clapper: Vista previa :clapper:</h4>
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[HotelAlura.webm](https://github.com/Soledad1988/Hotel-BackEnd/assets/99606808/239a71c5-df88-46d3-b7b6-c50fae662e84)
 
-## Running unit tests
+## Tecnologia Utilizada
+:heavy_check_mark: Java.
+:heavy_check_mark: SpringBoot.
+:heavy_check_mark: Hibernate - JPA.
+:heavy_check_mark: FlyWay.
+:heavy_check_mark:Validation.
+:heavy_check_mark: MySql.
+:heavy_check_mark: Angular.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Enlace BackEnd
+:link: https://github.com/Soledad1988/Hotel-BackEnd.git
 
-## Running end-to-end tests
+## Autor
+<h4>Torres Brenda</h4>
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+|<img src="https://user-images.githubusercontent.com/99606808/226099248-ec32b348-0485-45e8-802f-39cec7e632b9.jpg" width=115>|
+| :---: |
